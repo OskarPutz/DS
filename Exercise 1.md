@@ -18,7 +18,7 @@ import pandas as pd
 
 
 ```python
-users = pd.read_csv('https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user', sep='|', index_col='user_id')
+users = pd.read_csv('u.user.csv', sep='|', index_col='user_id')
 ```
 
 ### Step 4. See the first 25 entries
@@ -251,116 +251,7 @@ users.head(25)
 users.tail(10)
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>age</th>
-      <th>gender</th>
-      <th>occupation</th>
-      <th>zip_code</th>
-    </tr>
-    <tr>
-      <th>user_id</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>934</th>
-      <td>61</td>
-      <td>M</td>
-      <td>engineer</td>
-      <td>22902</td>
-    </tr>
-    <tr>
-      <th>935</th>
-      <td>42</td>
-      <td>M</td>
-      <td>doctor</td>
-      <td>66221</td>
-    </tr>
-    <tr>
-      <th>936</th>
-      <td>24</td>
-      <td>M</td>
-      <td>other</td>
-      <td>32789</td>
-    </tr>
-    <tr>
-      <th>937</th>
-      <td>48</td>
-      <td>M</td>
-      <td>educator</td>
-      <td>98072</td>
-    </tr>
-    <tr>
-      <th>938</th>
-      <td>38</td>
-      <td>F</td>
-      <td>technician</td>
-      <td>55038</td>
-    </tr>
-    <tr>
-      <th>939</th>
-      <td>26</td>
-      <td>F</td>
-      <td>student</td>
-      <td>33319</td>
-    </tr>
-    <tr>
-      <th>940</th>
-      <td>32</td>
-      <td>M</td>
-      <td>administrator</td>
-      <td>02215</td>
-    </tr>
-    <tr>
-      <th>941</th>
-      <td>20</td>
-      <td>M</td>
-      <td>student</td>
-      <td>97229</td>
-    </tr>
-    <tr>
-      <th>942</th>
-      <td>48</td>
-      <td>F</td>
-      <td>librarian</td>
-      <td>78209</td>
-    </tr>
-    <tr>
-      <th>943</th>
-      <td>22</td>
-      <td>M</td>
-      <td>student</td>
-      <td>77841</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+    
 
 ### Step 6. What is the number of observations in the dataset?
 
@@ -369,18 +260,7 @@ users.tail(10)
 users.info()
 ```
 
-    <class 'pandas.core.frame.DataFrame'>
-    Index: 943 entries, 1 to 943
-    Data columns (total 4 columns):
-     #   Column      Non-Null Count  Dtype 
-    ---  ------      --------------  ----- 
-     0   age         943 non-null    int64 
-     1   gender      943 non-null    object
-     2   occupation  943 non-null    object
-     3   zip_code    943 non-null    object
-    dtypes: int64(1), object(3)
-    memory usage: 36.8+ KB
-
+    
 
 ### Step 7. What is the number of columns in the dataset?
 
@@ -398,12 +278,7 @@ users.shape[1]
 users.columns
 ```
 
-
-
-
-    Index(['age', 'gender', 'occupation', 'zip_code'], dtype='object')
-
-
+    
 
 ### Step 9. How is the dataset indexed?
 
@@ -412,15 +287,7 @@ users.columns
 users.index
 ```
 
-
-
-
-    Index([  1,   2,   3,   4,   5,   6,   7,   8,   9,  10,
-           ...
-           934, 935, 936, 937, 938, 939, 940, 941, 942, 943],
-          dtype='int64', name='user_id', length=943)
-
-
+    
 
 ### Step 10. What is the data type of each column?
 
@@ -429,16 +296,7 @@ users.index
 users.dtypes
 ```
 
-
-
-
-    age            int64
-    gender        object
-    occupation    object
-    zip_code      object
-    dtype: object
-
-
+    
 
 ### Step 11. Print only the occupation column
 
@@ -447,24 +305,7 @@ users.dtypes
 users.occupation
 ```
 
-
-
-
-    user_id
-    1         technician
-    2              other
-    3             writer
-    4         technician
-    5              other
-               ...      
-    939          student
-    940    administrator
-    941          student
-    942        librarian
-    943          student
-    Name: occupation, Length: 943, dtype: object
-
-
+    
 
 ### Step 12. How many different occupations are in this dataset?
 
@@ -473,12 +314,7 @@ users.occupation
 users.occupation.nunique()
 ```
 
-
-
-
-    21
-
-
+    
 
 ### Step 13. What is the most frequent occupation?
 
@@ -487,34 +323,7 @@ users.occupation.nunique()
 users.occupation.value_counts()
 ```
 
-
-
-
-    occupation
-    student          196
-    other            105
-    educator          95
-    administrator     79
-    engineer          67
-    programmer        66
-    librarian         51
-    writer            45
-    executive         32
-    scientist         31
-    artist            28
-    technician        27
-    marketing         26
-    entertainment     18
-    healthcare        16
-    retired           14
-    lawyer            12
-    salesman          12
-    none               9
-    homemaker          7
-    doctor             7
-    Name: count, dtype: int64
-
-
+    
 
 ### Step 14. Summarize the DataFrame.
 
@@ -523,68 +332,7 @@ users.occupation.value_counts()
 users.describe()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>943.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>34.051962</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>12.192740</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>7.000000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>25.000000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>31.000000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>43.000000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>73.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+    
 
 ### Step 15. Summarize all the columns
 
@@ -593,116 +341,7 @@ users.describe()
 users.describe(include='all')
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>age</th>
-      <th>gender</th>
-      <th>occupation</th>
-      <th>zip_code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>943.000000</td>
-      <td>943</td>
-      <td>943</td>
-      <td>943</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>NaN</td>
-      <td>2</td>
-      <td>21</td>
-      <td>795</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>NaN</td>
-      <td>M</td>
-      <td>student</td>
-      <td>55414</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>NaN</td>
-      <td>670</td>
-      <td>196</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>34.051962</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>12.192740</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>7.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>25.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>31.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>43.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>73.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+    
 
 ### Step 16. Summarize only the occupation column
 
@@ -711,16 +350,7 @@ users.describe(include='all')
 users.occupation.describe()
 ```
 
-
-
-
-    count         943
-    unique         21
-    top       student
-    freq          196
-    Name: occupation, dtype: object
-
-
+    
 
 ### Step 17. What is the mean age of users?
 
@@ -729,12 +359,7 @@ users.occupation.describe()
 users.age.mean()
 ```
 
-
-
-
-    np.float64(34.05196182396607)
-
-
+    
 
 ### Step 18. What is the age with least occurrence?
 
@@ -743,21 +368,4 @@ users.age.mean()
 users.age.value_counts(ascending=True)
 ```
 
-
-
-
-    age
-    73     1
-    10     1
-    66     1
-    7      1
-    11     1
-          ..
-    27    35
-    28    36
-    22    37
-    25    38
-    30    39
-    Name: count, Length: 61, dtype: int64
-
-
+    
