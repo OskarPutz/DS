@@ -8,3 +8,4 @@ Descriptive Statistics
 - [Report 4.(data visualisation)](data_visualisation.md)
 - [Report 5.(univariate analysis)](univariate_analysis.md)
 - [Report 6.(bivariate analysis)](bivariate_analysis.md)
+- [Report 7.(multivariate analysis)](multivariate_analysis.md)
